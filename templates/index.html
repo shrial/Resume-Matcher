@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Resume Matcher</title>
+    <style>
+        body{
+            background-color:rgb(249, 236, 127);
+        }
+        p{
+            margin: 8vh 8vw;
+            font-size: 1.4em;
+            line-height: 1.5;
+            font-weight: bold;
+        }
+        .box{
+            width : 30vw;
+            height: 55vh;
+            background-color:rgb(235, 106, 106);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 35vw;
+
+        }
+        h2{
+            margin-left: 7vw;
+            margin-top: 9vh;
+            font-family: Arial, sans-serif;
+            display:inline-block;
+            font-size: 1.6em;
+            color: rgb(250, 243, 243);
+        }
+        input{
+            height : 5vh;
+            width: 15vw;
+            margin-left: 9vw;
+            margin-top: 10vh;
+            font-size: 1em;
+        }
+        button{
+            display: block;
+            margin-left: 11vw;
+            margin-top: 5vh;
+            height: 5vh;
+            width: 8vw;
+            border-radius: 5px;
+            font-size: 1.01em;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Welcome to the Smart Resume Matcher! This tool helps you find the best job matches based on your resume. 
+        Please upload your resume in PDF format, and it will analyze your resume against our job database to find the best matches for you.
+    </p>
+    <div class="box">
+    <h2>Upload Your Resume</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="resume" required />
+        <button type="submit">Upload</button>
+    </form>
+    </div>
+</body>
+</html>

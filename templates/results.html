@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Match Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background-color:rgb(249, 236, 127);
+        }
+        h1 {
+            color: #333;
+        }
+        .job-result {
+            background-color:rgba(247, 175, 175, 0.99);
+            color: rgba(13, 11, 126, 0.8);
+            border-radius: 10px;
+            padding: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+        }
+        .match {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Match Results</h1>
+
+    {% for job in results %}
+  <div class="job-result">
+    <h3>{{ job.title }}</h3>
+    <p>{{ job.company }} — {{ job.type }}</p>
+    <p>{{ job.description[:380] }}...</p>
+    <p>{{ job.url }}</p>
+  </div>
+{% endfor %}
+    {% if not results %}
+        <p>No matching jobs found.</p>
+    {% endif %}
+
+    <a href="/">Back to Home</a>
+</body>
+</html>
