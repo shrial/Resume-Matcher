@@ -16,3 +16,4 @@ ResumeMatcher is a Flask-based web app that reads a PDF resume, extracts relevan
 - Requests – for calling the Remotive API
 - HTML,CSS - for the frontend
 
+API documentation link: https://github.com/remotive-com/remote-jobs-api 
